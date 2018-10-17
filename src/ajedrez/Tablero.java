@@ -15,15 +15,10 @@ public class Tablero {
 		System.out.println("Reinas en la lista:");
 		for (Reina r1 : listaReinas)
 			System.out.println("Reina: " + r1.posLlegada + " F:" + r1.fil + " C:" + r1.col);
-		
 		System.out.println("La lista mide:"+listaReinas.size()+"\n");
 		
-		int pos = -1;
-		int fil,col;
-		int cantidadConflictos=0;
-		
-		for (int j = 0; j < cantidadReinas; j++) {
-			cantidadConflictos = 0;
+		for (int j = 0,cantidadConflictos=0,pos = -1,fil,col; j < cantidadReinas; j++,cantidadConflictos = 0) {
+			
 			fil = listaReinas.get(j).fil;
 			col = listaReinas.get(j).col;
 			Reina reinaAux = new Reina(fil,col);
